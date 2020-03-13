@@ -4,11 +4,12 @@ class Basket extends React.Component{
 
     render() {
         return(
-            <header className={'basket'}>
+            <div className={'basket'}
+                 style={{display: 'inline-block'}}>
                 {/*<h3>Basket</h3>*/}
-                <p>Items: {this.props.items}</p>
+                <p>{this.props.items}</p>
                 {/*<p>Total price: {this.props.totalPrice} $</p>*/}
-            </header>
+            </div>
         )
     }
 }

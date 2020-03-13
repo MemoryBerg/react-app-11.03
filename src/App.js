@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import Goods from "./Components/goods";
 import Basket from "./Components/basket";
+import Header from "./Components/header";
+import Footer from "./Components/footer";
+
 
 let prods = [];
 let price;
@@ -45,22 +48,16 @@ class App extends Component{
     });
 
     return(
-        <div>
-        <header>
-            <h3>Basket</h3>
-            <Basket
+        <div style={{padding: '10px'}}>
+            <Header
                 items={this.state.basket.length}
-                // count={this.state.count}
-                // totalPrice={totalPrice}
+                totalPrice={totalPrice}
             />
-            <p>Total price: {totalPrice} $</p>
-
-        </header>
-        <div className={"Goods"}>
-            {goods}
-        </div>
-            <Basket
-                items={this.state.basket.length}
+            <div className={"Goods"}>
+                {goods}
+            </div>
+            <Footer
+                items={'(' + this.state.basket.length + ')'}
             />
         </div>
 

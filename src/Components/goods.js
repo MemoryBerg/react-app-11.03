@@ -9,7 +9,6 @@ class Goods extends React.Component {
                 <p>Price: {this.props.price} $</p>
                 <input
                     id={this.props.id}
-                    onChange={this.props.onInputChange}
                     type='number'
                 />
                 <button
